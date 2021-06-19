@@ -1,3 +1,16 @@
+Adaption to kartesian hot wire foam cutter
+
+For BluePill device with STM32F103.
+
+Changes:
+- enabled B axis
+- inverted STEPPERS_DISABLE to match the orginal GRBL and work with A4988 and DRV8825
+
+The Hot Cutter uses X, Y axes to control one side of the hot wire and A, B the other side. This way X, Y movements get the speed by the f parameter while A, B - synchronized to X, Y - may get slightly different speed.
+
+Build with ST CubeIDE - that has replaced the retired Atollic TrueStudio.
+
+
 # up to 6-AXIS-USBCNC-GRBL
 This repository is based on [usbcnc grbl](https://github.com/usbcnc/grbl) which in turn is based on [native grbl 1.1f](https://github.com/gnea/grbl)<br>
 With 6-AXIS-USBCNC-GRBL you can use 3,4(default),5 or 6 axis depend on definition in config.h
